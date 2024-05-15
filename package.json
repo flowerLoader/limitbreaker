@@ -1,5 +1,5 @@
 {
-  "name": "plugintemplate",
+  "name": "limitbreaker",
   "version": "1.0.0",
   "description": "Template plugin example for flowerLoader",
   "main": "index.js",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/flowerLoader/PluginTemplate#readme",
   "dependencies": {
     "@flowerloader/api": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30"
   }
 }
