@@ -2,49 +2,43 @@
  * A simple patch to expose the game's limits and allow tweaking them
  */
 
-import { FlowerAPI } from "@flowerloader/api/FlowerAPI";
-import { FlowerPlugin } from "@flowerloader/api/FlowerPlugin";
-import { LogSource } from "@flowerloader/api/logSource";
+import { FlowerMeta, IFlowerPlugin, FlowerAPI, LogSource } from "@flowerloader/api";
 
-export const Plugin: FlowerPlugin &
+export const META: FlowerMeta =
 {
-    CONFIG: { MaxPartySize: number }
-} =
-{
-
     GUID: "flowerteam.limitbreaker",
-
     VERSION: "1.0.0",
-
     NAME: "Limit Breaker",
+    ENABLED: true
+};
 
-    ENABLED: true,
+export default class Plugin implements IFlowerPlugin
+{
 
-    flower: {} as FlowerAPI,
-    logger: {} as LogSource,
+    flower: FlowerAPI
+    logger: LogSource
 
     CONFIG:
-    {
-        //Default: 5
-        MaxPartySize: 10,
-    },
+        {
+            //Default: 5
+            MaxPartySize: 10,
+        }
 
-    PluginRegistered: function (flower, logger)
+    Awake()
     {
-        Plugin.flower = flower;
-        Plugin.logger = logger;
-        Plugin.logger.write("Loaded");
-    },
-
-    PluginAwake: function ()
-    {
-        Plugin.logger.write("Setting limits");
+        this.logger.write("Setting limits");
 
         //@ts-ignore
-        Plugin.flower.RegisterPatch(tWgm, "initNext", function (b)
+        this.flower.RegisterPatch(tWgm, "initNext", function (b)
         {
-            this.tGameCharactor.playerTeamMemberLimitNum = Plugin.CONFIG.MaxPartySize;
+            this.tGameCharactor.playerTeamMemberLimitNum = this.CONFIG.MaxPartySize;
         }, false);
-    },
+    }
 
+    constructor(flower: FlowerAPI, logger: LogSource)
+    {
+        this.flower = flower;
+        this.logger = logger;
+        this.logger.write("Loaded");
+    }
 }
