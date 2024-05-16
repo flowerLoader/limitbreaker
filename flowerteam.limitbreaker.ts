@@ -18,7 +18,7 @@ export default class Plugin implements IFlowerPlugin
     flower: FlowerAPI
     logger: LogSource
 
-    CONFIG:
+    CONFIG =
         {
             //Default: 5
             MaxPartySize: 10,
@@ -27,11 +27,12 @@ export default class Plugin implements IFlowerPlugin
     Awake()
     {
         this.logger.write("Setting limits");
+        const plugin = this;
 
         //@ts-ignore
-        this.flower.RegisterPatch(tWgm, "initNext", function (b)
+        this.flower.RegisterPatch(this.flower.GetGameMain(), "initNext", function (this: b)
         {
-            this.tGameCharactor.playerTeamMemberLimitNum = this.CONFIG.MaxPartySize;
+            this.tGameCharactor.playerTeamMemberLimitNum = plugin.CONFIG.MaxPartySize;
         }, false);
     }
 
