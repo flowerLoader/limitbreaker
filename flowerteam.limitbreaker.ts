@@ -29,8 +29,8 @@ export default class Plugin implements IFlowerPlugin
         this.logger.write("Setting limits");
         const plugin = this;
 
-        //@ts-ignore
-        this.flower.RegisterPatch(this.flower.GetGameMain(), "initNext", function (this: b)
+        //Todo: replace this with the well-defined type for tGameMain
+        this.flower.RegisterPatch(this.flower.GetGameMain(), "initNext", function (this: any, b)
         {
             this.tGameCharactor.playerTeamMemberLimitNum = plugin.CONFIG.MaxPartySize;
         }, false);
