@@ -7,7 +7,7 @@ import { FlowerMeta, IFlowerPlugin, FlowerAPI, LogSource } from "@flowerloader/a
 export const META: FlowerMeta =
 {
     GUID: "flowerteam.limitbreaker",
-    VERSION: "1.0.0",
+    VERSION: "1.0.1",
     NAME: "Limit Breaker",
     ENABLED: true
 };
@@ -27,13 +27,7 @@ export default class Plugin implements IFlowerPlugin
     Awake()
     {
         this.logger.write("Setting limits");
-        const plugin = this;
-
-        //Todo: replace this with the well-defined type for tGameMain
-        this.flower.RegisterPatch(this.flower.GetGameMain(), "initNext", function (this: any, b)
-        {
-            this.tGameCharactor.playerTeamMemberLimitNum = plugin.CONFIG.MaxPartySize;
-        }, false);
+        this.flower.GetGameMain().tGameCharactor.playerTeamMemberLimitNum = this.CONFIG.MaxPartySize;
     }
 
     constructor(flower: FlowerAPI, logger: LogSource)
