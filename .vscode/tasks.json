@@ -6,7 +6,7 @@
 		{
 			"label": "esbuild",
 			"type": "shell",
-			"command": "npx esbuild *.ts --format=esm --outdir=build/",
+			"command": "npx esbuild --bundle *.ts --format=esm --outdir=build/",
 			"group": {
 				"kind": "build",
 				"isDefault": true

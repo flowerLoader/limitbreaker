@@ -1,6 +1,6 @@
 {
   "name": "limitbreaker",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Template plugin example for flowerLoader",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/flowerLoader/PluginTemplate#readme",
   "dependencies": {
-    "@flowerloader/api": "^1.0.0"
+    "@flowerloader/api": "^1.2.0",
+    "@flowerloader/coawtypes": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",

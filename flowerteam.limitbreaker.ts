@@ -2,7 +2,8 @@
  * A simple patch to expose the game's limits and allow tweaking them
  */
 
-import { FlowerMeta, IFlowerPlugin, FlowerAPI, LogSource } from "@flowerloader/api";
+import { FlowerMeta, FlowerAPI, LogSource, BasePlugin } from "@flowerloader/api";
+import { GameDataCOAW } from "@flowerloader/coawtypes";
 
 export const META: FlowerMeta =
 {
@@ -12,12 +13,8 @@ export const META: FlowerMeta =
     ENABLED: true
 };
 
-export default class Plugin implements IFlowerPlugin
+export default class Plugin extends BasePlugin<GameDataCOAW>
 {
-
-    flower: FlowerAPI
-    logger: LogSource
-
     CONFIG =
         {
             //Default: 5
@@ -30,10 +27,4 @@ export default class Plugin implements IFlowerPlugin
         this.flower.GetGameMain().tGameMain.tGameCharactor.playerTeamMemberLimitNum = this.CONFIG.MaxPartySize;
     }
 
-    constructor(flower: FlowerAPI, logger: LogSource)
-    {
-        this.flower = flower;
-        this.logger = logger;
-        this.logger.write("Loaded");
-    }
 }
