@@ -2,7 +2,7 @@
   "name": "limitbreaker",
   "version": "1.2.0",
   "description": "Template plugin example for flowerLoader",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/flowerLoader/PluginTemplate.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Robin",
+  "license": "CC BY-NC 4.0",
   "bugs": {
     "url": "https://github.com/flowerLoader/PluginTemplate/issues"
   },
