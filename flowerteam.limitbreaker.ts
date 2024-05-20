@@ -27,7 +27,7 @@ export default class Plugin implements IFlowerPlugin
     Awake()
     {
         this.logger.write("Setting limits");
-        this.flower.GetGameMain().tGameCharactor.playerTeamMemberLimitNum = this.CONFIG.MaxPartySize;
+        this.flower.GetGameMain().tGameMain.tGameCharactor.playerTeamMemberLimitNum = this.CONFIG.MaxPartySize;
     }
 
     constructor(flower: FlowerAPI, logger: LogSource)
