@@ -1,8 +1,8 @@
 {
   "name": "limitbreaker",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Template plugin example for flowerLoader",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/flowerLoader/PluginTemplate.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Robin",
+  "license": "CC BY-NC 4.0",
   "bugs": {
     "url": "https://github.com/flowerLoader/PluginTemplate/issues"
   },
   "homepage": "https://github.com/flowerLoader/PluginTemplate#readme",
   "dependencies": {
-    "@flowerloader/api": "^1.0.0"
+    "@flowerloader/api": "^1.2.0",
+    "@flowerloader/coawtypes": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
