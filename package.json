@@ -4,6 +4,7 @@
   "description": "Template plugin example for flowerLoader",
   "main": "",
   "scripts": {
+    "lint": "biome check .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,10 +22,7 @@
     "@flowerloader/coawtypes": "^1.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.2.0",
-    "eslint": "^10.8.1",
-    "globals": "^15.2.0",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^8.67.0"
+    "@biomejs/biome": "^1.9.4",
+    "typescript": "^7.0.2"
   }
 }
