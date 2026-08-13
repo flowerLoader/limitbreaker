@@ -1,28 +1,28 @@
 {
-  "name": "limitbreaker",
-  "version": "1.2.0",
-  "description": "Template plugin example for flowerLoader",
-  "main": "",
-  "scripts": {
-    "lint": "biome check .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/flowerLoader/PluginTemplate.git"
-  },
-  "author": "Robin",
-  "license": "CC BY-NC 4.0",
-  "bugs": {
-    "url": "https://github.com/flowerLoader/PluginTemplate/issues"
-  },
-  "homepage": "https://github.com/flowerLoader/PluginTemplate#readme",
-  "dependencies": {
-    "@flowerloader/api": "^1.2.0",
-    "@flowerloader/coawtypes": "^1.0.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "typescript": "^7.0.2"
-  }
+	"name": "limitbreaker",
+	"version": "1.2.0",
+	"description": "Template plugin example for flowerLoader",
+	"main": "",
+	"scripts": {
+		"lint": "biome check .",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/flowerLoader/PluginTemplate.git"
+	},
+	"author": "Robin",
+	"license": "CC BY-NC 4.0",
+	"bugs": {
+		"url": "https://github.com/flowerLoader/PluginTemplate/issues"
+	},
+	"homepage": "https://github.com/flowerLoader/PluginTemplate#readme",
+	"dependencies": {
+		"@flowerloader/api": "^1.2.0",
+		"@flowerloader/coawtypes": "^1.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.8",
+		"typescript": "^7.0.2"
+	}
 }
