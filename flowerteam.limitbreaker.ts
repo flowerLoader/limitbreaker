@@ -2,12 +2,7 @@
  * A simple patch to expose the game's limits and allow tweaking them
  */
 
-import {
-	BasePlugin,
-	FlowerAPI,
-	type FlowerMeta,
-	LogSource,
-} from "@flowerloader/api";
+import { BasePlugin, type FlowerMeta } from "@flowerloader/api";
 import type { GameDataCOAW } from "@flowerloader/coawtypes";
 
 export const META: FlowerMeta = {
