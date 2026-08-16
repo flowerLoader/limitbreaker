@@ -5,7 +5,7 @@
 	"main": "",
 	"scripts": {
 		"lint": "biome check .",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"no tests configured\""
 	},
 	"repository": {
 		"type": "git",
@@ -19,7 +19,7 @@
 	"homepage": "https://github.com/flowerLoader/PluginTemplate#readme",
 	"dependencies": {
 		"@flowerloader/api": "^1.2.0",
-		"@flowerloader/coawtypes": "^1.0.0"
+		"@flowerloader/coawtypes": "git+https://github.com/flowerLoader/CoaWTypes.git#33413af0cce793a26e32719cab82a62f466f71ee"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.8",
