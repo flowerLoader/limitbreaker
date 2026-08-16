@@ -4,8 +4,7 @@
 	"description": "Template plugin example for flowerLoader",
 	"main": "",
 	"scripts": {
-		"lint": "biome check .",
-		"test": "echo \"no tests configured\""
+		"lint": "biome check ."
 	},
 	"repository": {
 		"type": "git",
