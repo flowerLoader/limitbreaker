@@ -21,7 +21,7 @@
 		"@flowerloader/coawtypes": "git+https://github.com/flowerLoader/CoaWTypes.git#33413af0cce793a26e32719cab82a62f466f71ee"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.5.8",
+		"@biomejs/biome": "2.5.7",
 		"typescript": "^7.0.2"
 	}
 }
